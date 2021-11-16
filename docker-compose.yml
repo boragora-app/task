@@ -1,0 +1,21 @@
+version: '3'
+services:
+  flask:
+    build: flask
+    volumes:
+      - ${DIR}./flask/app:/app
+    environment:
+      - FLASK_APP=api.py
+      - FLASK_ENV=development
+  react:
+    build: react
+    volumes:
+      - ${DIR}./react:/app
+    ports:
+      - 8123:3000
+#  nginx:
+#    build:
+#      context: react
+#      dockerfile: Dockerfile.prd
+#    ports:
+#      - "8124:80"

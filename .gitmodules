@@ -1,0 +1,6 @@
+[submodule "react"]
+	path = react
+	url = git@github.com:boragora-digital/task-react.git
+[submodule "flask"]
+	path = flask
+	url = git@github.com:boragora-digital/task-flask.git

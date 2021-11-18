@@ -10,12 +10,13 @@ services:
   react:
     build: react
     volumes:
-      - ${DIR}./react:/app
+      - ${DIR}./react/src:/app/src
+      - ${DIR}./react/public:/app/public
     ports:
       - 8123:3000
-#  nginx:
-#    build:
-#      context: react
-#      dockerfile: Dockerfile.prd
-#    ports:
-#      - "8124:80"
+#   nginx:
+#     build:
+#       context: react
+#       dockerfile: Dockerfile.prd
+#     ports:
+#       - "8124:80"
